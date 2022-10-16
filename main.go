@@ -14,7 +14,6 @@ import (
 var BOT_TOKEN string
 var USERNAME string
 
-var cmd = exec.Command("ngrok", "tcp", "22")
 
 type ApiResponse struct {
 	StatusCode string `json:"status_code"`
@@ -24,6 +23,7 @@ type ApiResponse struct {
 }
 
 func startNgrok() {
+	cmd := exec.Command("ngrok", "tcp", "22")
 	go cmd.Run()
 }
 
