@@ -49,9 +49,6 @@ func getNgrokUrl() (string, error) {
 }
 
 func sendTelegramMessage(message string) error {
-	fmt.Println(BOT_TOKEN)
-	fmt.Println(USERNAME)
-
 	res, err := http.Get(fmt.Sprintf("https://api.telegram.org/bot%s/sendMessage?chat_id=%s&text=%s", BOT_TOKEN, USERNAME, message))
 	if err != nil {
 		return fmt.Errorf("making http get request: %w", err)
