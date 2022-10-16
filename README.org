@@ -4,4 +4,24 @@ This script with try to start =ngrok= and send notification via telegram bot
 
 If something breaks, app will try to =killall ngrok= and retry every 1-15 minutes
 
-* Installation
+* Getting started
+
+*** Install =ngrok=
+*** Clone repository
+#+begin_src bash
+git clone https://github.com/sleroq/ngrok-to-telegram.git && cd ngrok-to-telegram
+#+end_src
+*** Set bot token and your userid
+#+begin_src bash
+cp scripts/env.sh.example scripts/env.sh
+
+$EDITOR scripts/env.sh
+#+end_src
+*** Build
+#+begin_src bash
+scripts/build.sh
+#+end_src
+*** Run
+#+begin_src bash
+out/startngrok
+#+end_src
