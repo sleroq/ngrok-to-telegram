@@ -1,0 +1,7 @@
+* Ngrok to Telegram
+
+This script with try to start =ngrok= and send notification via telegram bot
+
+If something breaks, app will try to =killall ngrok= and retry every 1-15 minutes
+
+* Installation
